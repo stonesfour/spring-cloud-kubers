@@ -2,10 +2,10 @@
 FROM primetoninc/jdk:1.8
 MAINTAINER stonesfour "sunshilei@caicloud.io"
 
-RUN mkdir /var/target
-#RUN cd  /var/tmp/webapp  && cp /var/tmp/webapp/war/sm_new.war /var/tmp/tomcat/apache-tomcat-8.5.8/webapps/
-RUN cp target/demo-hello-0.0.1-SNAPSHOT.jar /var/target/
 
-EXPOSE 8080
+# change path to your repo dir
+COPY ./target/demo-hello-0.0.1-SNAPSHOT.jar  /demo-hello.jar
 
-CMD ["java", "-jar", "target/demo-hello-0.0.1-SNAPSHOT.jar"]
+EXPOSE 8088
+
+CMD ["java", "-jar", "/demo-hello.jar"]

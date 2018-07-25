@@ -4,8 +4,8 @@ MAINTAINER stonesfour "sunshilei@caicloud.io"
 
 
 # change path to your repo dir
-COPY ./target/demo-hello-0.0.1-SNAPSHOT.jar  /demo-hello.jar
+COPY ./demo-hello/target/demo-hello-0.0.1-SNAPSHOT.jar  /demo-hello.jar
 
-EXPOSE 8088
+EXPOSE 8080
 
 CMD ["java", "-jar", "/demo-hello.jar"]

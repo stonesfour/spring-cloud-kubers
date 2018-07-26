@@ -24,8 +24,8 @@ public class HelloHealth {
         return "health: "+name;
     }
 
-    @GetMapping("/movie/address/{id}")
+    @GetMapping("/a/{id}")
     public String findById(@PathVariable Long id) {
-        return this.restTemplate.getForObject("http://demo-hello/health/关联项目+" + id, String.class);
+        return this.restTemplate.getForObject("http://demo-hello:8080/health/关联项目+" + id, String.class);
     }
 }

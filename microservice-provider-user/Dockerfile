@@ -5,9 +5,9 @@ MAINTAINER stonesfour "sunshilei@caicloud.io"
 #默认安装jdk
 
 #拷贝 编译包 指定路径
-COPY ./microservice-provider-user/microservice-provider-user-0.0.1-SNAPSHOT.jar /microservice-provider-user.jar
+COPY microservice-provider-user-0.0.1-SNAPSHOT.jar /microservice-provider-user.jar
 #指定端口
-EXPOSE 8080
+EXPOSE 7900
 
 #运行启动
 CMD ["java", "-jar", "/microservice-provider-user.jar"]

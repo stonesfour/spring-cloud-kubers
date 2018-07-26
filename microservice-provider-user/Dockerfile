@@ -10,5 +10,5 @@ COPY ./microservice-provider-user/microservice-provider-user-0.0.1-SNAPSHOT.jar 
 EXPOSE 8080
 
 #运行启动
-# CMD ["java", "-jar", "/microservice-provider-user.jar"]
+CMD ["java", "-jar", "/microservice-provider-user.jar"]
 

@@ -35,7 +35,19 @@ public class MovieController {
     return id;
   }
 
-
+  @GetMapping("/sleep/{times}")
+  public Long findSleep(@PathVariable Long times) {
+    new Thread() {
+      public void run() {
+        try {
+          Thread.sleep(times);
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+      }
+    }.start();
+    return times;
+  }
 
   public User findByIdFallback(Long id) {
     User user = new User();

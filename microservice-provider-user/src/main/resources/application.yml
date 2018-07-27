@@ -12,6 +12,11 @@ spring:
     data: classpath:data.sql
   application:
     name: microservice-provider-user
+  zipkin:
+    base-url: http://microservice-sleuth-server:9411
+  sleuth:
+    sampler:
+      percentage: 1.0
 logging:
   level:
     root: INFO

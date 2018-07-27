@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: microservice-sleuth-server
+server:
+  port: 9411
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@microservice-discovery-eureka:8761/eureka/
+    instance:
+      instanceId: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}

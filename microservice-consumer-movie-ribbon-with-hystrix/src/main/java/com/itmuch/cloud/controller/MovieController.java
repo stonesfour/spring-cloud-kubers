@@ -30,6 +30,13 @@ public class MovieController {
     return this.restTemplate.getForObject("http://microservice-provider-user/simple/" + id, User.class);
   }
 
+  @GetMapping("/simple/{id}")
+  public Long findId(@PathVariable Long id) {
+    return id;
+  }
+
+
+
   public User findByIdFallback(Long id) {
     User user = new User();
     user.setId(0L);

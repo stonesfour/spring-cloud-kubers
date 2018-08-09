@@ -25,7 +25,7 @@ public class HelloHealth {
     }
 
     @GetMapping("/a/{id}")
-    public String findById(@PathVariable Long id) {
-        return this.restTemplate.getForObject("http://demo-hello:8080/health/关联项目+" + id, String.class);
+    public String findById(@PathVariable String id) {
+        return this.restTemplate.getForObject("http://demo-hello:8080/health/我来自demo-hello服务,\n" + id, String.class);
     }
 }
